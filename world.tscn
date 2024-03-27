@@ -88,5 +88,5 @@ libraries = {
 }
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10136, 0.96145, 4.02283)
+transform = Transform3D(1, 0, 0, 0, 0.563713, 0.82597, 0, -0.82597, 0.563713, -1.10136, 3.27961, 1.80197)
 light_energy = 10.0
