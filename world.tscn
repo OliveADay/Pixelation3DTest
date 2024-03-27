@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://o3ymxui4wnbi"]
+[gd_scene load_steps=9 format=3 uid="uid://o3ymxui4wnbi"]
 
 [ext_resource type="Script" path="res://box.gd" id="1_n3wma"]
 [ext_resource type="Texture2D" uid="uid://df8ove3lbasdm" path="res://box_face.png" id="2_lg5kl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x24v4"]
+albedo_texture = ExtResource("2_lg5kl")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfymj"]
 resource_name = "Material"
@@ -75,6 +78,7 @@ script = ExtResource("1_n3wma")
 
 [node name="Cube" type="MeshInstance3D" parent="box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0179638, 0)
+material_override = SubResource("StandardMaterial3D_x24v4")
 mesh = SubResource("ArrayMesh_fbqo6")
 skeleton = NodePath("")
 
@@ -82,3 +86,7 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_uv533")
 }
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10136, 0.96145, 4.02283)
+light_energy = 10.0
